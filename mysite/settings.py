@@ -74,35 +74,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-# By default
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
-
-# Mysql Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.path.join(BASE_DIR, 'db.mysql'),
-        'USER': 'root', # Your Mysql Username & Password
-        'PASSWORD' : 'python1122',
-        'NAME' : 'djangogirls', # Databasename
-        'HOST' : 'localhost',
-        'PORT' : '3306',
-        'OPTION' : { # Following are required changes
-            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'",
-            #Tell Mysqldb to connect with 'utf8mb4' character set
-            'charset' : 'utf8mb4',
-        }
-        #Tell Django to build the thailand database with the 'utf8mb4' character set
-        #'DJANGO_TEST' : {
-        #    'CHARSET' : 'utf8mb4',
-        #    'COLLATION' : 'utf8mb4_unicode_ci',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
